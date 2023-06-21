@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+    --header-height: 1.8rem;
+
+    --first-color: #3fc060;
+    --first-color-alt: #048654;
+    --title-color: #232323;
+    --logo-dark-color: #162328;
+    --text-color: #000;
+    --text-color-light: #6c6c6c;
+    --body-color: #f2f2f2;
+    --container-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --body-font: "Poppins", sans-serif;
+
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.nav-link {
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: blue;
+}
+
+.scrollTop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+    background: rgb(75, 75, 173);
+    border-radius: 0.4rem;
+    z-index: var(--z-tooltip);
+    transition: 0.4s;
+    visibility: hidden;
+}
+
+.scrollTop:hover {
+    background-color: rgb(0, 0, 255);
+}
+
+.scrollTop_icon {
+    font-size: 1.8rem;
+    color: var(--body-color);
+}
+
+.show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+.nav_menu {
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.nav_menu a.active-link {
+    color: blue;
+    font-weight: bold;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    background-color: #878787;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.item h3 {
+    margin-top: 0;
+    color: #000000da;
+    text-align: center;
+    white-space: nowrap;
+    outline-color: #848484;
+}
+
+.item label {
+    display: block;
+    text-align: center;
+    background-color: rgb(2, 190, 2);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 10px;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item label:hover {
+    background-color: darkgreen;
+}
+
+.item input[type="checkbox"] {
+    display: none;
+}
+
+.item input[type="checkbox"]:checked+label {
+    background-color: rgb(223, 0, 0);
+    transition: 0.3s;
+}
+
+.item input:hover[type="checkbox"]:checked+label {
+    background-color: rgb(146, 0, 0);
+}
+
+
+.item .price {
+    color: #000000;
+    font-weight: 500;
+}
+
+.total {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total h2 {
+    color: #000000;
+    font-size: 25px;
+}
+
+.total h2 span {
+    font-size: 20px;
+}
+
+.total #totalPrice {
+    font-weight: bold;
+    font-size: 24px;
+    color: rgba(0, 128, 0, 0.747);
+}
+
+.total .btn-primary {
+    margin-left: 10px;
+    margin-top: -9px;
+    border-radius: 14px;
+    background-color: rgb(2, 190, 2);
+    border: none;
+    box-shadow: rgba(000, 000, 000, 0.1) 0 0 100px;
+    transition: 0.3s;
+}
+
+.total .btn-primary:focus {
+    box-shadow: none;
+    outline: 4px;
+}
+
+.total .btn-primary:hover {
+    background-color: darkgreen;
+}
+
+.grey {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.swiper {
+    padding-top: 20px;
+    padding-bottom: 35px;
+    width: 100%;
+
+}
+
+.modal {
+    padding: 40px;
+}
+
+.navbar-nav .nav-link {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    border-bottom-color: gray;
+}
+
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #ff8a00, #e52e71, #3a1c71);
+}
+
+.batas {
+    padding-top: 45px;
+}
+
+.img-testimoni {
+    width: 100px;
+}
+
+.carousel-inner {
+    padding: 0 10%;
+}
+
+.carousel-inner h3 {
+    margin-top: 15px;
+}
